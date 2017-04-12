@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  context-path: /girl
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/girldb
+    username: root
+    password: root
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+    timeout: 0
+mybatis:
+  type-aliases-package: spring.domain
+logging:
+  level:
+    spring: DEBUG
+    org.springframework.security: info
+  file: C:/Users/wgt/Desktop/project_log/girl.log
